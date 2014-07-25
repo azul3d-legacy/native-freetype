@@ -1,0 +1,14 @@
+diff bzip2-1.0.6_patched/Makefile bzip2-1.0.6/Makefile
+24c24
+< CFLAGS=-DBZ_STRICT_ANSI=1 -DBZ_NO_STDIO=1 -Wall -Winline -O2 -g $(BIGFILES)
+---
+> CFLAGS=-Wall -Winline -O2 -g $(BIGFILES)
+diff bzip2-1.0.6_patched/bzlib.c bzip2-1.0.6/bzlib.c
+33,38d32
+< #ifndef STEVIE
+< #define STEVIE
+< void bz_internal_error ( int errcode ) {
+< };
+< #endif
+< 
+Only in bzip2-1.0.6_patched: install.sh
