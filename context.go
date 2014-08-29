@@ -11,6 +11,11 @@ package freetype
 #cgo linux LDFLAGS: -l:libfreetype.a -l:libz.a -l:libpng.a -l:libbz2.a -l:libm.a
 #cgo linux CFLAGS: -I/usr/include/freetype2
 
+// TODO(slimsag): add the other OS X freetype versions
+#cgo darwin CFLAGS: -I/usr/local/Cellar/freetype/2.5.3_1/include/freetype2/
+#cgo darwin LDFLAGS: -L/usr/local/Cellar/freetype/2.5.3_1/lib/
+#cgo darwin LDFLAGS: -lfreetype
+
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include FT_SIZES_H
